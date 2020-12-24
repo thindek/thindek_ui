@@ -14,7 +14,6 @@ part 'utils/screen.dart';
 part 'utils/validator.dart';
 part 'utils/values.dart';
 
-
 part 'basic_widgets/avatar.dart';
 part 'basic_widgets/image.dart';
 part 'basic_widgets/scaffold.dart';

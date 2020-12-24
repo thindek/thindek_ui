@@ -1,6 +1,5 @@
 part of thindek_ui;
 
-
 Future<bool> thdkToastInfo({
   @required String msg,
   Color backgroundColor = Colors.black54,

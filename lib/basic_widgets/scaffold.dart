@@ -1,6 +1,5 @@
 part of thindek_ui;
 
-
 /// Scaffold
 ///
 /// [tftWhiteAppBar]
