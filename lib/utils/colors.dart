@@ -1,4 +1,4 @@
-import 'dart:ui';
+part of thindek_ui;
 
 class AppColors {
   static const Color transparentColor = Color(0xFFFFFF);

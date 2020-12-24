@@ -1,5 +1,4 @@
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+part of thindek_ui;
 
 /// 设置宽度
 double autoWidth(double width) {

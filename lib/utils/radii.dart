@@ -1,4 +1,4 @@
-import 'package:flutter/rendering.dart';
+part of thindek_ui;
 
 class Radii {
   static const BorderRadiusGeometry r6 = BorderRadius.all(Radius.circular(6));

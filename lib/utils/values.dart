@@ -1,3 +1,5 @@
+part of thindek_ui;
+
 /// 服务器信息
 // const LEANCLOUD_APP_ID = 'z6PuVkPJMuKCBTXVFVHfoJLI-gzGzoHsz';
 // const LEANCLOUD_APP_KEY = 'wfUiXmQxBFIxGgclGtWgOA4H';

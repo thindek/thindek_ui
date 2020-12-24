@@ -1,3 +1,5 @@
+part of thindek_ui;
+
 class Valid {
   /// 检查用户名格式
   bool isUsername(String input) {

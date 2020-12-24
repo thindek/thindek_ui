@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import '../utils/index.dart';
-import 'image.dart';
+part of thindek_ui;
 
 Widget tftCircleAvatar(double length, String avatar, Color borderColor, double borderWidth) {
   return Container(

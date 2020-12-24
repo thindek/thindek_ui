@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import '../utils/index.dart';
+part of thindek_ui;
 
 Widget tftSmallSpace() {
   return SizedBox(
