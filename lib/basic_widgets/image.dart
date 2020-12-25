@@ -13,7 +13,7 @@ Widget tdkImage(
       width: width,
       margin: margin,
       decoration: BoxDecoration(
-        borderRadius: Radii.r6,
+        borderRadius: TDKRadii.r6,
         image: DecorationImage(
           image: imageProvider,
           fit: BoxFit.cover,
@@ -28,7 +28,7 @@ Widget tdkImage(
           width: width,
           height: height,
           decoration: BoxDecoration(
-            borderRadius: Radii.r6,
+            borderRadius: TDKRadii.r6,
             color: Colors.grey[300],
           ),
         )),

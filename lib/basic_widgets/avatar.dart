@@ -16,7 +16,7 @@ Widget tdkSquareAvatar(double length, String avatar, Color borderColor, double b
   return Container(
     width: length,
     height: length,
-    decoration: BoxDecoration(border: Border.all(color: borderColor, width: borderWidth), borderRadius: Radii.r0),
-    child: ClipRRect(borderRadius: Radii.r0, child: tdkImage(avatar)),
+    decoration: BoxDecoration(border: Border.all(color: borderColor, width: borderWidth), borderRadius: TDKRadii.r0),
+    child: ClipRRect(borderRadius: TDKRadii.r0, child: tdkImage(avatar)),
   );
 }

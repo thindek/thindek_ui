@@ -1,6 +1,6 @@
 part of thindek_ui;
 
-class AppColors {
+class TDKColors {
   static const Color transparentColor = Color(0xFFFFFF);
 
   ///  主色

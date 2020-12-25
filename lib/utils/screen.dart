@@ -1,5 +1,6 @@
 part of thindek_ui;
 
+
 /// 设置宽度
 double autoWidth(double width) {
   return ScreenUtil().setWidth(width);
