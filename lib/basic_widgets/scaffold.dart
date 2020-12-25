@@ -2,13 +2,13 @@ part of thindek_ui;
 
 /// Scaffold
 ///
-/// [tftWhiteAppBar]
+/// [tdkWhiteAppBar]
 ///
-/// [tftDivider]
+/// [tdkDivider]
 ///
-/// [tftSectionTitle]
+/// [tdkSectionTitle]
 
-Widget tftWhiteAppBar(BuildContext context, bool isCenter, {String title = ''}) {
+Widget tdkWhiteAppBar(BuildContext context, bool isCenter, {String title = ''}) {
   return AppBar(
     toolbarHeight: MediaQuery.of(context).size.height * 0.06,
     elevation: 0,
@@ -21,12 +21,12 @@ Widget tftWhiteAppBar(BuildContext context, bool isCenter, {String title = ''}) 
   );
 }
 
-Widget tftDivider(BuildContext context) {
+Widget tdkDivider(BuildContext context) {
   return Container(
       margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * MARGIN_RATIO), child: Divider());
 }
 
-Widget tftSectionTitle(BuildContext context, String title, String more, String route) {
+Widget tdkSectionTitle(BuildContext context, String title, String more, String route) {
   return Container(
     margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * MARGIN_RATIO),
     height: autoFontSize(80),

@@ -1,6 +1,6 @@
 part of thindek_ui;
 
-Widget tftImage(
+Widget tdkImage(
   String url, {
   double width,
   double height,

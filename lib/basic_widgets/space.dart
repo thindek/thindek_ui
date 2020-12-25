@@ -1,6 +1,6 @@
 part of thindek_ui;
 
-Widget tftSmallSpace() {
+Widget tdkSmallSpace() {
   return SizedBox(
     height: autoFontSize(15),
   );
