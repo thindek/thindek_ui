@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -17,7 +18,9 @@ part 'basic_widgets/avatar.dart';
 part 'basic_widgets/image.dart';
 part 'basic_widgets/scaffold.dart';
 part 'basic_widgets/space.dart';
+part 'basic_widgets/swiper.dart';
 part 'basic_widgets/toast.dart';
+part 'basic_widgets/verticalTabs.dart';
 
 /// A Calculator.
 class Calculator {
@@ -32,6 +35,7 @@ class Calculator {
 
 /// 默认布局边距
 const MARGIN_RATIO = 0.035;
+const IMG_GAP_RATIO = 0.08;
 
 /// 长列表刷新粒度
 

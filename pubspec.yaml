@@ -1,6 +1,6 @@
 name: thindek_ui
 description: Flutter UI toolkit for developing thindek's mobile applications 
-version: 0.0.1
+version: 0.2.1
 homepage: https://thindek.com
 
 environment:
@@ -14,6 +14,9 @@ dependencies:
   dynamic_theme: ^1.0.1
 
   analyzer: ^0.39.15
+
+  # LeanCloud 数据存储
+  leancloud_storage: ^0.4.3
 
   # 路由管理
   auto_route: ^0.6.7
@@ -44,6 +47,9 @@ dependencies:
 
   # 定制扩展文本
   extended_text: ^4.0.0
+
+  #页面轮播图
+  flutter_swiper: ^1.1.6
 
 
 
