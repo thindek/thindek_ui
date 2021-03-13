@@ -6,6 +6,7 @@ import 'package:flutter/rendering.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:extended_text/extended_text.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
@@ -15,6 +16,7 @@ part 'utils/screen.dart';
 part 'utils/validator.dart';
 
 part 'basic_widgets/avatar.dart';
+part 'basic_widgets/content.dart';
 part 'basic_widgets/image.dart';
 part 'basic_widgets/scaffold.dart';
 part 'basic_widgets/space.dart';
