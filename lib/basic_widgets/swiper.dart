@@ -16,7 +16,7 @@ Widget tdkSwiper(BuildContext context, double ratio, List<Map> imageList, dynami
                   image: NetworkImage(
                     imageList[index]['image'],
                   ),
-                  fit: BoxFit.fill,
+                  fit: BoxFit.cover,
                 )),
           );
         },
