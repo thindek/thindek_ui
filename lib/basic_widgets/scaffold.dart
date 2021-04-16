@@ -65,3 +65,10 @@ Widget tdkSectionTitle(BuildContext context, String title, String more, String r
     ),
   );
 }
+
+class TDKSectionTitle extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}

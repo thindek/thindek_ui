@@ -1,41 +1,47 @@
 part of thindek_ui;
 
-Widget tdkFullContent(BuildContext context, String content) {
-  return Container(
-      margin: EdgeInsets.symmetric(
-          horizontal: MediaQuery.of(context).size.width * MARGIN_RATIO, vertical: autoFontSize(10)),
-      child: Text(
-        content,
-        style: TextStyle(fontSize: autoFontSize(bodyF)),
-      ));
+class TDKFullContent extends StatelessWidget {
+  final String content;
+
+  const TDKFullContent({Key key, this.content}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        margin: EdgeInsets.symmetric(
+            horizontal: MediaQuery.of(context).size.width * MARGIN_RATIO, vertical: autoFontSize(10)),
+        child: Text(
+          content,
+          style: TextStyle(fontSize: autoFontSize(bodyF)),
+        ));
+  }
 }
 
-// ignore: camel_case_types
-class tdkExpandableContent extends StatefulWidget {
+class TDKExpandableContent extends StatefulWidget {
   final String text;
   final int maxLines;
   final TextStyle style;
   final bool expand;
   final Color labelColor;
 
-  const tdkExpandableContent({Key key, this.text, this.maxLines, this.style, this.expand, this.labelColor})
+  const TDKExpandableContent({Key key, this.text, this.maxLines, this.style, this.expand, this.labelColor})
       : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return _tdkExpandableContentState(text, maxLines, style, expand, labelColor);
+    return _TDKExpandableContentState(text, maxLines, style, expand, labelColor);
   }
 }
 
 // ignore: camel_case_types
-class _tdkExpandableContentState extends State<tdkExpandableContent> {
+class _TDKExpandableContentState extends State<TDKExpandableContent> {
   final String text;
   final int maxLines;
   final TextStyle style;
   bool expand;
   final Color labelColor;
 
-  _tdkExpandableContentState(this.text, this.maxLines, this.style, this.expand, this.labelColor) {
+  _TDKExpandableContentState(this.text, this.maxLines, this.style, this.expand, this.labelColor) {
     if (expand == null) {
       expand = false;
     }

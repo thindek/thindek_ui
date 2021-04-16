@@ -2,118 +2,128 @@ part of thindek_ui;
 
 /// Image
 ///
-/// [mshImage]
-/// [mshAdaptiveImage]
 
-Widget tdkImage(
-  String url, {
-  double width,
-  double height,
-  BorderRadiusGeometry radius,
-  EdgeInsetsGeometry margin,
-}) {
-  return CachedNetworkImage(
-    imageUrl: url,
-    imageBuilder: (context, imageProvider) => Stack(
-      children: [
-        Container(
-          height: height,
-          width: width,
-          margin: margin,
-          decoration: BoxDecoration(
-            borderRadius: radius,
-            color: Colors.white,
-          ),
-        ),
-        Container(
-          height: height,
-          width: width,
-          margin: margin,
-          decoration: BoxDecoration(
-            borderRadius: radius,
-            image: DecorationImage(
-              image: imageProvider,
-              fit: BoxFit.cover,
-              // colorFilter: ColorFilter.mode(Colors.red, BlendMode.colorBurn),
+class TDKImage extends StatelessWidget {
+  final String url;
+  final double width;
+  final double height;
+  final BorderRadiusGeometry radius;
+  final EdgeInsetsGeometry margin;
+
+  const TDKImage({Key key, @required this.url, this.width, this.height, this.radius, this.margin}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return CachedNetworkImage(
+      imageUrl: url,
+      imageBuilder: (context, imageProvider) => Stack(
+        children: [
+          Container(
+            height: height,
+            width: width,
+            margin: margin,
+            decoration: BoxDecoration(
+              borderRadius: radius,
+              color: Colors.white,
             ),
           ),
-        ),
-      ],
-    ),
-    placeholder: (context, url) {
-      return Container(
-        child: SkeletonAnimation(
-            child: Container(
-          width: width,
-          height: height,
-          decoration: BoxDecoration(
-            borderRadius: radius,
-            color: Colors.grey[300],
+          Container(
+            height: height,
+            width: width,
+            margin: margin,
+            decoration: BoxDecoration(
+              borderRadius: radius,
+              image: DecorationImage(
+                image: imageProvider,
+                fit: BoxFit.cover,
+                // colorFilter: ColorFilter.mode(Colors.red, BlendMode.colorBurn),
+              ),
+            ),
           ),
-        )),
-      );
-    },
-    errorWidget: (context, url, error) => Container(
-      width: width,
-      height: height,
-      decoration: BoxDecoration(
-        borderRadius: radius,
-        color: Colors.grey[200],
+        ],
       ),
-      child: Icon(Icons.error),
-    ),
-  );
+      placeholder: (context, url) {
+        return Container(
+          child: SkeletonAnimation(
+              child: Container(
+            width: width,
+            height: height,
+            decoration: BoxDecoration(
+              borderRadius: radius,
+              color: Colors.grey[300],
+            ),
+          )),
+        );
+      },
+      errorWidget: (context, url, error) => Container(
+        width: width,
+        height: height,
+        decoration: BoxDecoration(
+          borderRadius: radius,
+          color: Colors.grey[200],
+        ),
+        child: Icon(Icons.error),
+      ),
+    );
+  }
 }
 
-Widget tdkMultiImages(BuildContext context, List _imageList) {
-  switch (_imageList.length) {
-    case 1:
-      {
-        return _oneImage(context, _imageList);
-      }
-      break;
-    case 2:
-      {
-        return _twoImages(context, _imageList);
-      }
-      break;
-    case 3:
-      {
-        return _threeImages(context, _imageList);
-      }
-      break;
-    case 4:
-      {
-        return _fourImages(context, _imageList);
-      }
-      break;
-    case 5:
-      {
-        return _fiveImages(context, _imageList);
-      }
-      break;
-    case 6:
-      {
-        return _sixImages(context, _imageList);
-      }
-      break;
-    case 7:
-      {
-        return _sevenImages(context, _imageList);
-      }
-      break;
-    case 8:
-      {
-        return _eightImages(context, _imageList);
-      }
-      break;
-    case 9:
-      {
-        return _nineImages(context, _imageList);
-      }
-      break;
+class TDKMultiImages extends StatelessWidget {
+  final List imageList;
+
+  const TDKMultiImages({Key key, @required this.imageList}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    switch (imageList.length) {
+      case 1:
+        {
+          return _oneImage(context, imageList);
+        }
+        break;
+      case 2:
+        {
+          return _twoImages(context, imageList);
+        }
+        break;
+      case 3:
+        {
+          return _threeImages(context, imageList);
+        }
+        break;
+      case 4:
+        {
+          return _fourImages(context, imageList);
+        }
+        break;
+      case 5:
+        {
+          return _fiveImages(context, imageList);
+        }
+        break;
+      case 6:
+        {
+          return _sixImages(context, imageList);
+        }
+        break;
+      case 7:
+        {
+          return _sevenImages(context, imageList);
+        }
+        break;
+      case 8:
+        {
+          return _eightImages(context, imageList);
+        }
+        break;
+      case 9:
+        {
+          return _nineImages(context, imageList);
+        }
+        break;
+    }
+    return Container();
   }
-  return Container();
 }
 
 Widget _oneImage(BuildContext context, List _motionImageList) {
@@ -383,8 +393,8 @@ Widget _nineImages(BuildContext context, List _motionImageList) {
 }
 
 Widget _singleImage(BuildContext context, String imageUrl) {
-  return tdkImage(
-    imageUrl,
+  return TDKImage(
+    url: imageUrl,
     width: MediaQuery.of(context).size.width * (1 - 2 * MARGIN_RATIO - 2 * IMG_GAP_RATIO) / 3,
     height: MediaQuery.of(context).size.width * (1 - 2 * MARGIN_RATIO - 2 * IMG_GAP_RATIO) / 3,
   );

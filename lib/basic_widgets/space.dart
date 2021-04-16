@@ -1,7 +1,10 @@
 part of thindek_ui;
 
-Widget tdkSmallSpace() {
-  return SizedBox(
-    height: autoFontSize(15),
-  );
+class TDKSpaceS extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: autoFontSize(15),
+    );
+  }
 }

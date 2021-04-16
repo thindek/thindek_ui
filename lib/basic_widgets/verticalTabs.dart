@@ -1,28 +1,8 @@
 part of thindek_ui;
 
-Widget tdkVerticalTabs(BuildContext context, List<Tab> tabs, Color mainColor, Widget verticalListView, dynamic method) {
-  return VerticalTabs(
-      contentScrollAxis: Axis.vertical,
-      direction: TextDirection.ltr,
-      disabledChangePageFromContentView: true,
-      indicatorColor: mainColor,
-      indicatorWidth: MediaQuery.of(context).size.width * 0.015,
-      initialIndex: 0,
-      selectedTabBackgroundColor: Colors.transparent,
-      tabsWidth: MediaQuery.of(context).size.width * 0.25,
-      selectedTabTextStyle: TextStyle(
-        fontWeight: FontWeight.bold,
-        color: mainColor,
-      ),
-      tabs: tabs,
-      onSelect: method,
-      contents: verticalListView);
-}
-
 enum IndicatorSide { start, end }
 
-/// A vertical tab widget for flutter
-class VerticalTabs extends StatefulWidget {
+class TDKVerticalTabs extends StatefulWidget {
   final Key key;
   final int initialIndex;
   final double tabsWidth;
@@ -45,36 +25,36 @@ class VerticalTabs extends StatefulWidget {
   final Function(int tabIndex) onSelect;
   final Color backgroundColor;
 
-  VerticalTabs(
+  TDKVerticalTabs(
       {this.key,
       @required this.tabs,
       @required this.contents,
+      @required this.indicatorColor,
+      @required this.onSelect,
       this.tabsWidth = 200,
       this.indicatorWidth = 3,
       this.indicatorSide,
       this.initialIndex = 0,
       this.direction = TextDirection.ltr,
-      this.indicatorColor = Colors.green,
-      this.disabledChangePageFromContentView = false,
-      this.contentScrollAxis = Axis.horizontal,
-      this.selectedTabBackgroundColor = const Color(0x1100ff00),
+      this.disabledChangePageFromContentView = true,
+      this.contentScrollAxis = Axis.vertical,
+      this.selectedTabBackgroundColor = Colors.transparent,
       this.tabBackgroundColor = const Color(0xfff8f8f8),
-      this.selectedTabTextStyle = const TextStyle(color: Colors.black),
+      this.selectedTabTextStyle = const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
       this.tabTextStyle = const TextStyle(color: Colors.black38),
       this.changePageCurve = Curves.easeInOut,
       this.changePageDuration = const Duration(milliseconds: 300),
       this.tabsShadowColor = Colors.black54,
       this.tabsElevation = 2.0,
-      this.onSelect,
       this.backgroundColor})
       : assert(tabs != null && contents != null),
         super(key: key);
 
   @override
-  _VerticalTabsState createState() => _VerticalTabsState();
+  _TDKVerticalTabsState createState() => _TDKVerticalTabsState();
 }
 
-class _VerticalTabsState extends State<VerticalTabs> with TickerProviderStateMixin {
+class _TDKVerticalTabsState extends State<TDKVerticalTabs> with TickerProviderStateMixin {
   int _selectedIndex;
   bool _changePageByTapView;
 
