@@ -26,7 +26,7 @@ Widget tdkDivider(BuildContext context) {
       margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * MARGIN_RATIO), child: Divider());
 }
 
-Widget tdkSectionTitle(BuildContext context, String title, String more, String route) {
+Widget tdkSectionTitle(BuildContext context, String title, String more, dynamic route) {
   return Container(
     margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * MARGIN_RATIO),
     height: autoFontSize(80),
@@ -41,9 +41,7 @@ Widget tdkSectionTitle(BuildContext context, String title, String more, String r
           ),
         ),
         GestureDetector(
-          onTap: () {
-            ExtendedNavigator.root.push(route);
-          },
+          onTap: () => route,
           child: Row(
             children: [
               Text(
