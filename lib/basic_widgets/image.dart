@@ -10,7 +10,7 @@ class TDKImage extends StatelessWidget {
   final BorderRadiusGeometry radius;
   final EdgeInsetsGeometry margin;
 
-  const TDKImage({Key key, @required this.url, this.width, this.height, this.radius, this.margin}) : super(key: key);
+  const TDKImage({Key key, @required this.url, @required this.width, @required this.height, this.radius, this.margin}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
