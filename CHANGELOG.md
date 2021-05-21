@@ -1,6 +1,11 @@
+## [0.4.0]
+
+* add example into project. 
+* display image error in TDKImage.
+
 ## [0.3.3]
 
-* update the pubspec.yaml
+* update the pubspec.yaml.
 
 ## [0.3.2]
 
