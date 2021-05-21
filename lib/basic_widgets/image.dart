@@ -62,7 +62,21 @@ class TDKImage extends StatelessWidget {
           borderRadius: radius,
           color: Colors.grey[200],
         ),
-        child: Icon(Icons.error),
+        child: Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.error,
+                color: Colors.black38,
+              ),
+              Text(
+                error.toString(),
+                style: TextStyle(fontSize: 10),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
