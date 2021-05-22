@@ -26,47 +26,49 @@ Widget tdkDivider(BuildContext context) {
       margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * MARGIN_RATIO), child: Divider());
 }
 
-Widget tdkSectionTitle(BuildContext context, String title, String more, dynamic route) {
-  return Container(
-    margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * MARGIN_RATIO),
-    height: autoFontSize(80),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          title,
-          style: TextStyle(
-            fontSize: autoFontSize(bodyF),
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        GestureDetector(
-          onTap: () => route,
-          child: Row(
-            children: [
-              Text(
-                more,
-                style: TextStyle(
-                  fontSize: autoFontSize(25),
-                  color: Colors.black38,
-                ),
-              ),
-              Icon(
-                Icons.arrow_forward_ios,
-                color: Colors.black38,
-                size: autoFontSize(20),
-              ),
-            ],
-          ),
-        ),
-      ],
-    ),
-  );
-}
-
 class TDKSectionTitle extends StatelessWidget {
+  final String title;
+  final String more;
+  final Function route;
+
+  const TDKSectionTitle({Key key, this.title, this.more, this.route}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * MARGIN_RATIO),
+      height: autoFontSize(80),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              fontSize: autoFontSize(bodyF),
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          GestureDetector(
+            onTap: () => route,
+            child: Row(
+              children: [
+                Text(
+                  more,
+                  style: TextStyle(
+                    fontSize: autoFontSize(25),
+                    color: Colors.black38,
+                  ),
+                ),
+                Icon(
+                  Icons.arrow_forward_ios,
+                  color: Colors.black38,
+                  size: autoFontSize(20),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

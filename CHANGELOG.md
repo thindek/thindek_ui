@@ -1,3 +1,7 @@
+## [0.4.1]
+
+* refactor the section title widget.
+
 ## [0.4.0]
 
 * add example into project. 

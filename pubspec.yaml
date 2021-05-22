@@ -1,7 +1,7 @@
 name: thindek_ui
 description: Flutter UI toolkit for developing thindek's mobile applications 
-version: 0.4.0
-homepage: https://thindek.com
+version: 0.4.1
+homepage: https://www.thindek.com/
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -14,9 +14,15 @@ dependencies:
 
   flutter_screenutil: ^3.1.1 #屏幕适配
   fluttertoast: ^7.1.1 #消息弹框
-  cached_network_image: ^2.0.0 #网络图片缓存
+  cached_network_image: ^2.5.0 #网络图片缓存
   extended_text: ^4.0.0 #定制扩展文本
   flutter_swiper: ^1.1.6 #页面轮播图
+
+#等待测试加入
+#  badges: ^1.1.3 #Badges
+#  extended_image: ^3.0.0-non-null-safety
+#  flutter_html: ^1.0.2 #HTML
+#  flutter_icons: ^1.1.0 #Icons
 
 
 
