@@ -24,7 +24,8 @@ class TDKExpandableContent extends StatefulWidget {
   final bool expand;
   final Color labelColor;
 
-  const TDKExpandableContent({Key key, this.text, this.maxLines, this.style, this.expand, this.labelColor})
+  const TDKExpandableContent(
+      {Key key, @required this.text, @required this.maxLines, this.style, this.expand, @required this.labelColor})
       : super(key: key);
 
   @override

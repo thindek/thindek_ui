@@ -29,7 +29,7 @@ Widget tdkDivider(BuildContext context) {
 class TDKSectionTitle extends StatelessWidget {
   final String title;
   final String more;
-  final Function route;
+  final dynamic route;
 
   const TDKSectionTitle({Key key, this.title, this.more, this.route}) : super(key: key);
 
@@ -49,7 +49,7 @@ class TDKSectionTitle extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: () => route,
+            onTap: route,
             child: Row(
               children: [
                 Text(
