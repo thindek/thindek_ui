@@ -1,6 +1,6 @@
-## [0.4.1]
+## [0.4.2]
 
-* refactor the section title widget.
+* refactor the section title and space widget.
 
 ## [0.4.0]
 
