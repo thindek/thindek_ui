@@ -12,6 +12,6 @@ Future<bool> tdkToastInfo({
     backgroundColor: backgroundColor,
     timeInSecForIosWeb: 1,
     textColor: textColor,
-    fontSize: autoFontSize(30),
+    fontSize: 30.sp,
   );
 }

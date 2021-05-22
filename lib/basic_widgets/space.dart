@@ -11,17 +11,17 @@ class TDKSpace extends StatelessWidget {
     switch (size) {
       case 1:
         {
-          return SizedBox(height: autoFontSize(15));
+          return SizedBox(height: 15.sp);
         }
         break;
       case 2:
         {
-          return SizedBox(height: autoFontSize(30));
+          return SizedBox(height: 30.sp);
         }
         break;
       case 3:
         {
-          return SizedBox(height: autoFontSize(45));
+          return SizedBox(height: 40.sp);
         }
         break;
     }

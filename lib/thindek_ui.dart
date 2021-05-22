@@ -20,7 +20,6 @@ part 'basic_widgets/toast.dart';
 part 'basic_widgets/verticalTabs.dart';
 part 'utils/colors.dart';
 part 'utils/radii.dart';
-part 'utils/screen.dart';
 part 'utils/validator.dart';
 
 /// A Calculator.

@@ -19,7 +19,7 @@ class TDKSwiper extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) {
             return Container(
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(autoWidth(15.0)),
+                  borderRadius: BorderRadius.circular(15.w),
                   image: DecorationImage(
                     image: NetworkImage(
                       imageList[index]['image'],

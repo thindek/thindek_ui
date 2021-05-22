@@ -37,14 +37,14 @@ class TDKSectionTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * MARGIN_RATIO),
-      height: autoFontSize(80),
+      height: 80.sp,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             title,
             style: TextStyle(
-              fontSize: autoFontSize(bodyF),
+              fontSize: bodyF.sp,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -55,14 +55,14 @@ class TDKSectionTitle extends StatelessWidget {
                 Text(
                   more,
                   style: TextStyle(
-                    fontSize: autoFontSize(25),
+                    fontSize: 25.sp,
                     color: Colors.black38,
                   ),
                 ),
                 Icon(
                   Icons.arrow_forward_ios,
                   color: Colors.black38,
-                  size: autoFontSize(20),
+                  size: 20.sp,
                 ),
               ],
             ),

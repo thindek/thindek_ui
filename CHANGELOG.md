@@ -1,4 +1,8 @@
-## [0.4.2]
+## [0.4.4]
+
+* change screenUtil usage to extension methods.
+
+## [0.4.3]
 
 * refactor the section title and space widget.
 

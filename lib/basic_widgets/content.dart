@@ -9,10 +9,10 @@ class TDKFullContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         margin: EdgeInsets.symmetric(
-            horizontal: MediaQuery.of(context).size.width * MARGIN_RATIO, vertical: autoFontSize(10)),
+            horizontal: MediaQuery.of(context).size.width * MARGIN_RATIO, vertical: 10.sp),
         child: Text(
           content,
-          style: TextStyle(fontSize: autoFontSize(bodyF)),
+          style: TextStyle(fontSize: bodyF.sp),
         ));
   }
 }

@@ -155,7 +155,7 @@ Widget _oneImage(BuildContext context, List _motionImageList) {
               maxHeight: MediaQuery.of(context).size.width * (1 - 2 * MARGIN_RATIO - 2 * IMG_GAP_RATIO) * 0.7,
             ),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(autoWidth(20)),
+              borderRadius: BorderRadius.circular(20.w),
               child: Image(
                 image: AssetImage('assets/images/logo_white.png'),
                 fit: BoxFit.cover,
