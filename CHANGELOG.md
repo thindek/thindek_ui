@@ -1,3 +1,7 @@
+## [0.4.5]
+
+* add TDKDisplayContent
+
 ## [0.4.4]
 
 * change screenUtil usage to extension methods.

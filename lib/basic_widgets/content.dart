@@ -8,8 +8,7 @@ class TDKFullContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.symmetric(
-            horizontal: MediaQuery.of(context).size.width * MARGIN_RATIO, vertical: 10.sp),
+        margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * MARGIN_RATIO, vertical: 10.sp),
         child: Text(
           content,
           style: TextStyle(fontSize: bodyF.sp),
@@ -88,6 +87,69 @@ class _TDKExpandableContentState extends State<TDKExpandableContent> {
                 ),
               ),
             ),
+          ],
+        );
+      } else {
+        return Text(text ?? '', style: style);
+      }
+    });
+  }
+}
+
+class TDKDisplayContent extends StatefulWidget {
+  final String text;
+  final int maxLines;
+  final TextStyle style;
+  final bool expand;
+  final Color labelColor;
+
+  const TDKDisplayContent(
+      {Key key, @required this.text, @required this.maxLines, this.style, this.expand, @required this.labelColor})
+      : super(key: key);
+
+  @override
+  State<StatefulWidget> createState() {
+    return _TDKDisplayContentState(text, maxLines, style, expand, labelColor);
+  }
+}
+
+// ignore: camel_case_types
+class _TDKDisplayContentState extends State<TDKDisplayContent> {
+  final String text;
+  final int maxLines;
+  final TextStyle style;
+  bool expand;
+  final Color labelColor;
+
+  _TDKDisplayContentState(this.text, this.maxLines, this.style, this.expand, this.labelColor) {
+    if (expand == null) {
+      expand = false;
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, size) {
+      final span = TextSpan(text: text ?? '', style: style);
+      final tp = TextPainter(text: span, maxLines: maxLines, textDirection: TextDirection.ltr);
+      tp.layout(maxWidth: size.maxWidth);
+
+      if (tp.didExceedMaxLines) {
+        return Stack(
+          children: <Widget>[
+            expand
+                ? Container(child: Text(text ?? '', style: style))
+                : Container(
+                    child: ExtendedText(text ?? '',
+                        maxLines: maxLines,
+                        style: style,
+                        overflowWidget: TextOverflowWidget(
+                            child: Text(
+                          '... 查看全部',
+                          style: TextStyle(color: labelColor),
+                        ))),
+                  ),
+            // Text(text ?? '', maxLines: maxLines, overflow: TextOverflow.ellipsis, style: style),
           ],
         );
       } else {

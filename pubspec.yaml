@@ -1,6 +1,6 @@
 name: thindek_ui
 description: Flutter UI toolkit for developing thindek's mobile applications 
-version: 0.4.4
+version: 0.4.5
 homepage: https://www.thindek.com/
 
 environment:

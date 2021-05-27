@@ -226,6 +226,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.16.1"
+  jpush_flutter:
+    dependency: "direct main"
+    description:
+      name: jpush_flutter
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.6.3"
   matcher:
     dependency: transitive
     description:
@@ -419,7 +426,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.4.3"
+    version: "0.4.4"
   transformer_page_view:
     dependency: transitive
     description:
