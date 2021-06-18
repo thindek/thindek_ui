@@ -4,18 +4,19 @@ part of thindek_ui;
 ///
 
 class TDKImage extends StatelessWidget {
-  final String url;
+  final String? url;
   final double width;
   final double height;
-  final BorderRadiusGeometry radius;
-  final EdgeInsetsGeometry margin;
+  final BorderRadiusGeometry? radius;
+  final EdgeInsetsGeometry? margin;
 
-  const TDKImage({Key key, @required this.url, @required this.width, @required this.height, this.radius, this.margin}) : super(key: key);
+  const TDKImage({Key? key, required this.url, required this.width, required this.height, this.radius, this.margin})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return CachedNetworkImage(
-      imageUrl: url,
+      imageUrl: url!,
       imageBuilder: (context, imageProvider) => Stack(
         children: [
           Container(
@@ -85,7 +86,7 @@ class TDKImage extends StatelessWidget {
 class TDKMultiImages extends StatelessWidget {
   final List imageList;
 
-  const TDKMultiImages({Key key, @required this.imageList}) : super(key: key);
+  const TDKMultiImages({Key? key, required this.imageList}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -94,47 +95,46 @@ class TDKMultiImages extends StatelessWidget {
         {
           return _oneImage(context, imageList);
         }
-        break;
+
       case 2:
         {
           return _twoImages(context, imageList);
         }
-        break;
+
       case 3:
         {
           return _threeImages(context, imageList);
         }
-        break;
+
       case 4:
         {
           return _fourImages(context, imageList);
         }
-        break;
+
       case 5:
         {
           return _fiveImages(context, imageList);
         }
-        break;
+
       case 6:
         {
           return _sixImages(context, imageList);
         }
-        break;
+
       case 7:
         {
           return _sevenImages(context, imageList);
         }
-        break;
+
       case 8:
         {
           return _eightImages(context, imageList);
         }
-        break;
+
       case 9:
         {
           return _nineImages(context, imageList);
         }
-        break;
     }
     return Container();
   }
@@ -421,11 +421,11 @@ class SkeletonAnimation extends StatefulWidget {
   final Curve curve;
 
   SkeletonAnimation(
-      {@required this.child,
+      {required this.child,
       this.shimmerColor = Colors.white54,
       this.gradientColor = const Color.fromARGB(0, 244, 244, 244),
       this.curve = Curves.fastOutSlowIn,
-      Key key})
+      Key? key})
       : super(key: key);
 
   @override
@@ -433,7 +433,7 @@ class SkeletonAnimation extends StatefulWidget {
 }
 
 class _SkeletonAnimationState extends State<SkeletonAnimation> with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {
@@ -468,7 +468,7 @@ class _SkeletonAnimationState extends State<SkeletonAnimation> with SingleTicker
                 alignment: AlignmentGeometryTween(
                   begin: Alignment(-1.0 - .2 * 3, .0),
                   end: Alignment(1.0 + .2 * 3, .0),
-                ).chain(CurveTween(curve: widget.curve)).evaluate(_controller),
+                ).chain(CurveTween(curve: widget.curve)).evaluate(_controller)!,
                 child: child,
               );
             },

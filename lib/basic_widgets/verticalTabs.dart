@@ -3,11 +3,11 @@ part of thindek_ui;
 enum IndicatorSide { start, end }
 
 class TDKVerticalTabs extends StatefulWidget {
-  final Key key;
+  final Key? key;
   final int initialIndex;
   final double tabsWidth;
   final double indicatorWidth;
-  final IndicatorSide indicatorSide;
+  final IndicatorSide? indicatorSide;
   final List<Tab> tabs;
   final Widget contents;
   final TextDirection direction;
@@ -22,15 +22,15 @@ class TDKVerticalTabs extends StatefulWidget {
   final Curve changePageCurve;
   final Color tabsShadowColor;
   final double tabsElevation;
-  final Function(int tabIndex) onSelect;
-  final Color backgroundColor;
+  final Function(int? tabIndex) onSelect;
+  final Color? backgroundColor;
 
   TDKVerticalTabs(
       {this.key,
-      @required this.tabs,
-      @required this.contents,
-      @required this.indicatorColor,
-      @required this.onSelect,
+      required this.tabs,
+      required this.contents,
+      required this.indicatorColor,
+      required this.onSelect,
       this.tabsWidth = 200,
       this.indicatorWidth = 3,
       this.indicatorSide,
@@ -47,20 +47,19 @@ class TDKVerticalTabs extends StatefulWidget {
       this.tabsShadowColor = Colors.black54,
       this.tabsElevation = 2.0,
       this.backgroundColor})
-      : assert(tabs != null && contents != null),
-        super(key: key);
+      : super(key: key);
 
   @override
   _TDKVerticalTabsState createState() => _TDKVerticalTabsState();
 }
 
 class _TDKVerticalTabsState extends State<TDKVerticalTabs> with TickerProviderStateMixin {
-  int _selectedIndex;
-  bool _changePageByTapView;
+  int? _selectedIndex;
+  bool? _changePageByTapView;
 
-  AnimationController animationController;
-  Animation<double> animation;
-  Animation<RelativeRect> rectAnimation;
+  AnimationController? animationController;
+  Animation<double>? animation;
+  Animation<RelativeRect>? rectAnimation;
 
   PageController pageController = PageController();
 
@@ -82,7 +81,7 @@ class _TDKVerticalTabsState extends State<TDKVerticalTabs> with TickerProviderSt
     if (widget.disabledChangePageFromContentView == true) pageScrollPhysics = NeverScrollableScrollPhysics();
 
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
       pageController.jumpToPage(widget.initialIndex);
       setState(() {});
     });
@@ -122,7 +121,7 @@ class _TDKVerticalTabsState extends State<TDKVerticalTabs> with TickerProviderSt
                             alignment = Alignment.centerRight;
                           }
 
-                          Widget child;
+                          Widget? child;
                           if (tab.child != null) {
                             child = tab.child;
                           } else {
@@ -133,7 +132,7 @@ class _TDKVerticalTabsState extends State<TDKVerticalTabs> with TickerProviderSt
                                     (tab.icon != null)
                                         ? Row(
                                             children: <Widget>[
-                                              tab.icon,
+                                              tab.icon!,
                                               SizedBox(
                                                 width: 5,
                                               )
@@ -144,7 +143,7 @@ class _TDKVerticalTabsState extends State<TDKVerticalTabs> with TickerProviderSt
                                         ? Container(
                                             width: widget.tabsWidth - 50,
                                             child: Text(
-                                              tab.text,
+                                              tab.text!,
                                               softWrap: true,
                                               style: _selectedIndex == index
                                                   ? widget.selectedTabTextStyle
@@ -158,7 +157,7 @@ class _TDKVerticalTabsState extends State<TDKVerticalTabs> with TickerProviderSt
                           Color itemBGColor = widget.tabBackgroundColor;
                           if (_selectedIndex == index) itemBGColor = widget.selectedTabBackgroundColor;
 
-                          double left, right;
+                          double? left, right;
                           if (widget.direction == TextDirection.rtl) {
                             left = (widget.indicatorSide == IndicatorSide.end) ? 0 : null;
                             right = (widget.indicatorSide == IndicatorSide.start) ? 0 : null;
@@ -255,8 +254,6 @@ class _TDKVerticalTabsState extends State<TDKVerticalTabs> with TickerProviderSt
     }
     animationControllers[index].forward();
 
-    if (widget.onSelect != null) {
-      widget.onSelect(_selectedIndex);
-    }
+    widget.onSelect(_selectedIndex);
   }
 }

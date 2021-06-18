@@ -27,11 +27,11 @@ Widget tdkDivider(BuildContext context) {
 }
 
 class TDKSectionTitle extends StatelessWidget {
-  final String title;
-  final String more;
+  final String? title;
+  final String? more;
   final dynamic route;
 
-  const TDKSectionTitle({Key key, this.title, this.more, this.route}) : super(key: key);
+  const TDKSectionTitle({Key? key, this.title, this.more, this.route}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class TDKSectionTitle extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            title,
+            title!,
             style: TextStyle(
               fontSize: bodyF.sp,
               fontWeight: FontWeight.bold,
@@ -53,7 +53,7 @@ class TDKSectionTitle extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  more,
+                  more!,
                   style: TextStyle(
                     fontSize: 25.sp,
                     color: Colors.black38,

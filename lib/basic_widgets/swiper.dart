@@ -1,11 +1,11 @@
 part of thindek_ui;
 
 class TDKSwiper extends StatelessWidget {
-  final double ratio;
-  final List<Map> imageList;
+  final double? ratio;
+  final List<Map>? imageList;
   final dynamic typeRedirect;
 
-  const TDKSwiper({Key key, this.ratio, this.imageList, this.typeRedirect}) : super(key: key);
+  const TDKSwiper({Key? key, this.ratio, this.imageList, this.typeRedirect}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class TDKSwiper extends StatelessWidget {
         horizontal: MediaQuery.of(context).size.width * MARGIN_RATIO,
       ),
       child: SizedBox(
-        height: MediaQuery.of(context).size.width * (1 - 2 * MARGIN_RATIO) * ratio,
+        height: MediaQuery.of(context).size.width * (1 - 2 * MARGIN_RATIO) * ratio!,
         child: Swiper(
           itemBuilder: (BuildContext context, int index) {
             return Container(
@@ -22,13 +22,13 @@ class TDKSwiper extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15.w),
                   image: DecorationImage(
                     image: NetworkImage(
-                      imageList[index]['image'],
+                      imageList![index]['image'],
                     ),
                     fit: BoxFit.cover,
                   )),
             );
           },
-          itemCount: imageList.length,
+          itemCount: imageList!.length,
           pagination: SwiperPagination(
             alignment: Alignment.bottomCenter,
             margin: EdgeInsets.all(0),

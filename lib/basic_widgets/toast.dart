@@ -1,7 +1,7 @@
 part of thindek_ui;
 
-Future<bool> tdkToastInfo({
-  @required String msg,
+Future<bool?> tdkToastInfo({
+  required String msg,
   Color backgroundColor = Colors.black54,
   Color textColor = Colors.white,
 }) async {
