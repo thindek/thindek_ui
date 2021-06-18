@@ -6,8 +6,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:extended_text/extended_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_card_swipper/flutter_card_swiper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 part 'basic_widgets/avatar.dart';

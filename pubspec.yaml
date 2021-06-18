@@ -5,24 +5,26 @@ homepage: https://www.thindek.com/
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
-  flutter: ">=1.17.0 <2.0.0"
+
 
 dependencies:
   flutter:
     sdk: flutter
 
 
-  flutter_screenutil: ^4.0.0 #屏幕适配
-  fluttertoast: ^7.1.1 #消息弹框
-  cached_network_image: ^2.5.0 #网络图片缓存
-  extended_text: ^4.0.0 #定制扩展文本
-  flutter_swiper: ^1.1.6 #页面轮播图
+  flutter_screenutil: ^5.0.0+2 #屏幕适配
+  fluttertoast: ^8.0.7 #消息弹框
+  cached_network_image: ^3.0.0 #网络图片缓存
+  extended_text: ^7.0.0 #定制扩展文本
+  badges: ^2.0.1 #Badges
+  flutter_card_swipper: ^0.4.0 #页面轮播图
+#  flutter_icons: ^1.1.0
+
+
 
 #等待测试加入
-#  badges: ^1.1.3 #Badges
-#  extended_image: ^3.0.0-non-null-safety
+#  extended_image: ^3.0.0-non-null-safety #图片处理
 #  flutter_html: ^1.0.2 #HTML
-#  flutter_icons: ^1.1.0 #Icons
 
 
 
