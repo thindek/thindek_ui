@@ -1,3 +1,7 @@
+## [1.0.0]
+
+* Flutter updates, code migrate to null-safety
+
 ## [0.4.5]
 
 * add TDKDisplayContent
