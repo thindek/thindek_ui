@@ -15,7 +15,7 @@ dependencies:
   flutter_screenutil: ^5.0.0+2 #屏幕适配
   fluttertoast: ^8.0.7 #消息弹框
   cached_network_image: ^3.0.0 #网络图片缓存
-  extended_text: ^7.0.0 #定制扩展文本
+  extended_text: ^9.0.0 #定制扩展文本
   badges: ^2.0.1 #Badges
   flutter_card_swipper: ^0.4.0 #页面轮播图
 #  flutter_icons: ^1.1.0
